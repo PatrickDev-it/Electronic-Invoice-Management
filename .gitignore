@@ -1,0 +1,5 @@
+/node_modules
+/_server-map
+/dist
+/.env
+/server/routes.json

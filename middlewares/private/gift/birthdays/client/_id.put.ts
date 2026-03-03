@@ -1,0 +1,23 @@
+import { error } from '@utils/request-utility';
+
+export default async ({ res }: Ctx, { body, validator }) => {
+	const validate = await validator(schema, body);
+	if (Array.isArray(validate)) {
+		return error(res, validate[0].message);
+	}
+};
+
+const schema = {
+	id: {
+		type: 'string',
+	},
+	status: {
+		type: 'string',
+		empty: false,
+		messages: {
+			required: 'Status is required.',
+			string: 'Status is required.',
+			stringEmpty: 'Status is required.',
+		},
+	},
+};

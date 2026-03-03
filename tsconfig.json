@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "CommonJS",
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"removeComments": false,
+		"moduleResolution": "Node",
+		"forceConsistentCasingInFileNames": false /* Skip type checking all .d.ts files. */,
+		"typeRoots": [
+			"./types",
+		],
+		"paths": {
+			"@handlers/*": [
+				"./handlers/*.ts"
+			],
+			"@middlewares/*": [
+				"./middlewares/*.ts"
+			],
+			"@utils/*": [
+				"./utils/*.ts"
+			],
+			"@types/*": [
+				"./types/*.d.ts"
+			]
+		}
+	}
+}
